@@ -2,6 +2,6 @@
 
 Discord API Version: 10
 
-**Binary modules requirement:**
+**Required binary modules:**
 - [GWSockets](https://github.com/FredyH/GWSockets)
 - [CHTTP](https://github.com/timschumi/gmod-chttp)
