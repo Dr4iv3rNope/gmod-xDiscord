@@ -7,7 +7,7 @@ if MyDiscordClient then
     MyDiscordClient:Shutdown()
 end
 
-MyDiscordClient = Discord.Client(DISCORD_APPLICATION_ID, DISCORD_TOKEN)
+MyDiscordClient = MyDiscordClient or Discord.Client(DISCORD_APPLICATION_ID, DISCORD_TOKEN)
 
 -- Creating Discord interaction controller to add commands
 MyDiscordInteractionController = Discord.InteractionController(MyDiscordClient)
