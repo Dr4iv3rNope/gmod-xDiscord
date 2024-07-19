@@ -11,8 +11,6 @@ function Discord.CLIENT:_StartHeartbeat(sec)
         sec,
         0,
         function()
-            self:Print("Heartbeat...")
-
             self:Dispatch(1, self._LastSequenceID)
         end
     )
