@@ -17,7 +17,6 @@ function Discord.InteractionCommandOption(name, description, type)
             name = name,
             description = description,
             type = type,
-            options = {}
         }
     }, Discord.INTERACTION_COMMAND_OPTION)
 end

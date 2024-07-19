@@ -4,6 +4,10 @@ Discord.INTERACTION_COMMAND = Discord.INTERACTION_COMMAND or {}
 Discord.INTERACTION_COMMAND.__index = Discord.INTERACTION_COMMAND
 
 function Discord.INTERACTION_COMMAND:AddOption(option)
+    if not self._RawData.options then
+        self._RawData.options = {}
+    end
+
     table.insert(self._RawData.options, option._RawData)
 
     return self
@@ -62,7 +66,7 @@ function Discord.InteractionCommand(name, description, type)
             name = name,
             description = description,
             type = type,
-            options = {},
+            options = nil,
             --default_member_permissions = 0
         }
     }, Discord.INTERACTION_COMMAND)
