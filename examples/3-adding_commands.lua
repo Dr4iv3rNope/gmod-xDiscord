@@ -15,7 +15,8 @@ MyDiscordInteractionController = Discord.InteractionController(MyDiscordClient)
 -- Creating interaction command
 local printCommand = Discord.InteractionCommand(
     "print", -- Command name that starts with slash (/)
-    "Print message in server console" -- Description
+    "Print message in server console", -- Description
+    Discord.COMMAND_TYPE_CHAT_INPUT
 )
 
 -- Add option
