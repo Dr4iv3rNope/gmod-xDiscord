@@ -95,3 +95,11 @@ local escapeCharacters = {
 function Discord.EscapeString(str)
     return string.gsub(str, ".", escapeCharacters)
 end
+
+function Discord.FormatUsername(username, discriminator)
+    if not discriminator or discriminator == "0" then
+        return username
+    else
+        return string.format("%s#%s", username, discriminator)
+    end
+end
