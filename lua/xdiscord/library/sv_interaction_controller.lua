@@ -12,8 +12,8 @@ end
 function Discord.INTERACTION_CONTROLLER:RegisterBulk()
     local commands = {}
 
-    for i, command in pairs(self.Commands) do
-        commands[i] = command._RawData
+    for _, command in pairs(self.Commands) do
+        table.insert(commands, command._RawData)
     end
 
     self.Client:Request(
