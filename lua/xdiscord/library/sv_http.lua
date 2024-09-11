@@ -10,10 +10,10 @@ function Discord.CLIENT:Request(method, path, data, callback)
     x.ExpectFunctionOrDefault(callback)
 
     CHTTP({
-        method	= method,
-        url		= string.format("https://discord.com/api/v%d%s", Discord.API_VERSION, path),
-        body	= data and json.encode(data) or nil,
-        type	= data and "application/json" or nil,
+        method = method,
+        url    = string.format("https://discord.com/api/v%d%s", Discord.API_VERSION, path),
+        body   = data and json.encode(data) or nil,
+        type   = data and "application/json" or nil,
 
         headers = {
             ["user-agent"] = "DiscordBot",
