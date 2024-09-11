@@ -33,8 +33,7 @@ printCommand:AddOption(
 -- Set callback
 printCommand:SetCallback(function(interaction, options)
     -- Building full username
-    local username = string.format(
-        "%s#%s",
+    local username = Discord.FormatUsername(
         -- https://discord.com/developers/docs/resources/guild#guild-member-object
         interaction.RawData.member.user.username,
         interaction.RawData.member.user.discriminator
