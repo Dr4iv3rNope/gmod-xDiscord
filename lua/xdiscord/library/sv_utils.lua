@@ -6,7 +6,7 @@ end
 
 function Discord.Color(r, g, b)
     return bit.bor(
-        bit.lshift(r, 16)
+        bit.lshift(r, 16),
         bit.lshift(g, 8),
         b
     )
